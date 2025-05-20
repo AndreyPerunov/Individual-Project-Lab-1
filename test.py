@@ -17,12 +17,12 @@ for i in range(len(data)):
   error = expected[i]['error']
   if len(error) == 0:
     [x1, x2] = findRootsOfQuadratic(a, b, c)
-    result = f"{i} Test passed" if (round(x1, 4), round(x2, 4)) == (round(expected[i]['x1'], 4), round(expected[i]['x2'], 4)) else f"{i} Test failed"
+    result = f"CASE[{i}] Test passed" if (round(x1, 4), round(x2, 4)) == (round(expected[i]['x1'], 4), round(expected[i]['x2'], 4)) else f"CASE[{i}] Test failed"
     test_results.append(result)
     results.append((x1, x2))
   else:
     realError = findRootsOfQuadratic(a, b, c)
-    result = f"{i} Test passed" if realError == error else f"{i} Test failed"
+    result = f"CASE[{i}] Test passed" if realError == error else f"CASE[{i}] Test failed"
     test_results.append(result)
     results.append(realError)
     
