@@ -5,7 +5,7 @@ def findRootsOfQuadratic(a, b, c):
   d = b ** 2 - 4 * a * c
   
   if d < 0:
-    raise Exception("No real roots")
+    return "No real roots"
   
   if d == 0:
     x1 = -b / (2 * a)
